@@ -29,10 +29,6 @@ body {
     animation: background-pan 10s ease-in infinite;
 }
 
-body.toggled {
-    animation: none;
-}
-
 @keyframes background-pan {
     from {
         background-position: 0% center;
