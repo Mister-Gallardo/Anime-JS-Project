@@ -45,8 +45,8 @@ const createTiles = quantity => {
 const createGrid = () => {
     wrapper.innerHTML = ""
 
-    columns = Math.floor(document.body.clientWidth / 50)
-    rows = Math.floor(document.body.clientHeight / 50)
+    columns = Math.floor(document.body.clientWidth / 57)
+    rows = Math.floor(document.body.clientHeight / 57)
 
     wrapper.style.setProperty("--columns", columns)
     wrapper.style.setProperty("--rows", rows)
