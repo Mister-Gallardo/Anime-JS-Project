@@ -81,7 +81,8 @@ body.toggled > #title {
 
     color: #fff;
 
-    transition: all 1s ease;
+    transition: opacity 1300ms ease;
+    pointer-events: none;
 }
 
 .centered {
