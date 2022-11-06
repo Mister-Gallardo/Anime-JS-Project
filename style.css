@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -21,6 +24,7 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
+    position: relative;
 
     animation: background-pan 10s ease-in infinite;
 }
@@ -53,7 +57,6 @@ body.toggled {
 .tile {
     cursor: pointer;
     position: relative;
-    z-index: 1000;
 }
 
 .tile::before {
@@ -62,4 +65,34 @@ body.toggled {
 
     position: absolute;
     inset: .5px;
+}
+
+body.toggled > #title {
+    opacity: 1;
+}
+
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 5rem;
+
+    color: #fff;
+
+    transition: all 1s ease;
+}
+
+.centered {
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 540px) {
+    #title {
+        font-size: 3rem;
+    }
 }

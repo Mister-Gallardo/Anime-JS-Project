@@ -4,8 +4,14 @@ const wrapper = document.getElementById("tiles-container")
 let toggled = false
 
 
+const toggle = () => {
+    toggled = !toggled;
+
+    document.body.classList.toggle("toggled");
+}
+
 const handleOnClick = (index) => {
-    toggled = !toggled
+    toggle()
 
     anime({
         targets: ".tile",
